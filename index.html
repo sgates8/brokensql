@@ -7,19 +7,41 @@
     <title>secure sql</title>
 </head>
 <body>
-    <!--mayhap this needs an action?-->
-    <form>
-        <label for="name">name</label>
-        <input id="name"></input>
-        </br>
-        <label for="username">username</label>
-        <input id="username">
-        </br>
-        <label for="email">email</label>
-        <input id="email">
-        </br>
-        <input type="submit">
-    </form>
-    </form>
-</body>
-</html>
+    <div class="textbox">
+        <form  method="POST" action="/">
+            <label for="name">Name:</label>
+            <input type="text" required
+        id="name"
+        name="name"
+        placeholder="name"
+        pattern="^([a-zA-Z]{2,25})(\s)*([A-Za-z]{2,25})?$"
+        title="please enter a valid name, only letters, spaces, hyphens, and apostrophes."
+        minlength="2"
+        maxlength="25"></input>
+            </br>
+            <label for="username">Username:</label>
+            <input type="text"
+        id="username"
+        name="username"
+        placeholder="name001"
+        pattern="[^-']([a-zA-Z0-9](?!.*''|--|  |- |' | '| -.*))+"
+        title="please enter a valid username, only letters, numbers, spaces, hyphens, and apostrophes."
+        minlength="2"
+        maxlength="15"></input>
+            </br>
+            <label for="email">Email:</label>
+            <input type="text"
+            id="email"
+            name="email"
+            placeholder="name@name.com"
+            pattern="^[a-zA-Z_.0-9]+@[a-zA-Z_.0-9]+\.[a-zA-Z]{2,3}$"
+        title="please enter a valid email, no numbers in the domain."
+        minlength="2"
+        maxlength="255"></input>
+            </br>
+            <input id="submit" type="submit">
+        </form>
+        </form>
+    </div>
+    </body>
+    </html>
